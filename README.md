@@ -28,7 +28,7 @@ Navigate to [http://localhost:3000](http://localhost:3000).
 
 #### How to go about work
 2. Run `git fetch` and `git pull` to get the latest work
-3. Create a new branch `git checkout -b feature/navbar`
+3. Create a new branch `git checkout -b feature/add_navbar_component`
 ##### Do some work
 4. `git add .` or `ga .`
 5. `git commit -am` or `gc -am "Add navbar component, Change global color, Removed temp-navbar"`
