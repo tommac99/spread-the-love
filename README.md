@@ -1,7 +1,8 @@
 # README
 
 ### How to get started
-1. Clone the repo
+First Clone the repo
+
 #### How can I fire up the app?
 Good question! Make sure you have Ruby ([rvm](https://rvm.io/rvm/install)), [nvm](https://github.com/nvm-sh/nvm#installing-and-updating), [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable), [Redis](https://formulae.brew.sh/formula/redis), and [Postgres](https://postgresapp.com/) installed, then run:
 
