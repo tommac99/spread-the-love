@@ -7,7 +7,11 @@ First Clone the repo
 Good question! Make sure you have Ruby ([rvm](https://rvm.io/rvm/install)), [nvm](https://github.com/nvm-sh/nvm#installing-and-updating), [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable), [Redis](https://formulae.brew.sh/formula/redis), and [Postgres](https://postgresapp.com/) installed, then run:
 
 `bundle install`
+
+then:
 `yarn`
+
+then:
 `bin/rails db:create db:migrate db:seed`
 
 then to start the servers in one terminal tab run:
