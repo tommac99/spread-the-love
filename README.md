@@ -60,4 +60,15 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+### Notable references
+- [https://rubygarage.org/blog/build-website-like-craigslist](https://rubygarage.org/blog/build-website-like-craigslist)
+- [https://www.ruby-lang.org/en/documentation/quickstart/](https://www.ruby-lang.org/en/documentation/quickstart/)
+- [https://edgeguides.rubyonrails.org](https://edgeguides.rubyonrails.org)
+- [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
+- [https://webpack.js.org/guides/getting-started/](https://webpack.js.org/guides/getting-started/)
+- [https://rspec.info](https://rspec.info)
+- [https://palantir.github.io/tslint/](https://palantir.github.io/tslint/)
+- [https://github.com/varvet/pundit](https://github.com/varvet/pundit) (Authorization)
+- Heroku (Hosting)
+- [https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)
+- [https://jacopretorius.net/2014/02/all-rails-db-rake-tasks-and-what-they-do.html](https://jacopretorius.net/2014/02/all-rails-db-rake-tasks-and-what-they-do.html)
