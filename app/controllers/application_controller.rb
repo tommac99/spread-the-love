@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
   def update
     @post = Post.find(params[:id])
     authorize @post
@@ -27,7 +26,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
+  def publish
+    @post = Post.find(params[:id])
+    authorize @post, :update?
+    @post.publish!
+    redirect_to @post
+  end
 
   private
 
