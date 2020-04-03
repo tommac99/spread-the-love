@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   after_action :verify_policy_scoped, only: :index
 
   def show
+    @user = authorize User.find(params[:id])
     record = Record.find_by(attribute: "value")
     if record.present?
       authorize record
