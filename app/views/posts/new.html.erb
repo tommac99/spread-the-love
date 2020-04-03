@@ -1,0 +1,19 @@
+<h1>Create New Post!</h1>
+
+<div class="container">
+<%= simple_form_for (@post) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description%>
+  <%= f.input :category, collection: Post::CATEGORY%>
+  <%= f.input :group, collection: ["Community post", "Job post"] %>
+  <%= f.input :location %>
+  <%= f.hidden_field :date, :value => Time.now %>
+  <%= f.button :submit %>
+<% end %>
+</div>
+<script>
+  const select_form = document.querySelectorAll("select")
+  select_form.forEach(element =>{
+    element.style.display = "block"
+ })
+</script>

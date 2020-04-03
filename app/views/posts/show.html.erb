@@ -1,0 +1,14 @@
+<h2><%= @post.title %></h2>
+<div>
+  <%= link_to "Edit Post" , edit_post_path(@post.id) %>
+</div>
+<div>
+  <%= link_to "Go to all Posts" , root_path %>
+</div>
+<div>
+   <%= link_to "Delete Post",
+                  post_path(@post.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+</div>
+

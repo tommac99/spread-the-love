@@ -1,0 +1,15 @@
+<div class ="posts">
+  <h1>Welcome to Spread the love</h1>
+  <% @posts.each do |post| %>
+
+    <%= link_to posts_path(post.id) do %>
+      <h3><%= post.title%></h3>
+    <%end%>
+
+    <p><%= post.description %></p>
+    <p><%= post.group %></p>
+    <p>Post by: <%= User.find(post.user_id).name%> - <%= (((Time.now - post.date) / 1.day).to_i < 1  ? (((Time.now - post.date) / 1.minute).to_i).to_s + " minutes ago" : (((Time.now - post.date) / 1.day).to_i).to_s + " days ago")%></p>
+  <%end%>
+</div>
+
+<%= link_to "Create Post", new_posts_path %>
