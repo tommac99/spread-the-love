@@ -16,6 +16,19 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+  def update
+    @post = Post.find(params[:id])
+    authorize @post
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render :edit
+    end
+  end
+
+
+
   private
 
   def user_not_authorized
@@ -27,6 +40,12 @@ class ApplicationController < ActionController::Base
     policy_name = exception.policy.class.to_s.underscore
     flash[:error] = t "#{policy_name}.#{exception.query}", scope: "pundit", default: :default
     redirect_to(request.referrer || root_path)
+    # en:
+    # pundit:
+    #   default: 'You cannot perform this action.'
+    #   post_policy:
+    #     update?: 'You cannot edit this post!'
+    #     create?: 'You cannot create posts!'
   end
 end
 
