@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
 
   def index
     @posts = policy_scope(Post)
+    @publications = policy_scope(publication_class, policy_scope_class: PublicationPolicy::Scope)
+    @posts = PostPolicy::Scope.new(current_user, Post).resolve
   end
 
   def show

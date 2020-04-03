@@ -11,4 +11,16 @@ class PostsController < ApplicationController
 
  def create
  end
+
+ def update
+  @post = Post.find(params[:id])
+  if @post.update_attributes(permitted_attributes(@post))
+    redirect_to @post
+  else
+    render :edit
+  end
 end
+
+end
+
+

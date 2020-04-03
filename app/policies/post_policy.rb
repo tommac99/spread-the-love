@@ -1,7 +1,7 @@
 class PostPolicy < ApplicationPolicy
 
   attr_reader :user, :post
-  
+
   def initialize(user, post)
     @user = user
     @post = post
@@ -21,6 +21,8 @@ class PostPolicy < ApplicationPolicy
       end
     end
   end
+
+  # Multiple error messages per one policy action?
 
   private
 
