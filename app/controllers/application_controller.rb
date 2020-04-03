@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except: :index
   after_action :verify_policy_scoped, only: :index
 
-
+  def index
+    @posts = policy_scope(Post)
+  end
 
   def show
     @post = policy_scope(Post).find(params[:id])
