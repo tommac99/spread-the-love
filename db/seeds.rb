@@ -9,7 +9,7 @@
 
 puts "Create Post"
 
-user = User.new(email: "juansolano1039@gmail.com",password: "123456")
+user = User.new(email: "juansolano1039@gmail.com",password: "123456" , name: "Juan Pablo Solano")
 user.save!
-post = Post.new(title: "Test",user_id: 1)
+post = Post.new(title: "Test",user_id: 1, category: "Volunteering",description: "This is a test", date: Time.now - 3 ,group: "Community post")
 post.save!
