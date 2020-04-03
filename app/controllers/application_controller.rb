@@ -33,6 +33,14 @@ class ApplicationController < ActionController::Base
     redirect_to @post
   end
 
+  def create
+    @publication = find_publication # assume this method returns any model that behaves like a publication
+    # @publication.class => Post
+    authorize @publication, policy_class: PublicationPolicy
+    @publication.publish!
+    redirect_to @publication
+  end
+
   private
 
   def user_not_authorized
