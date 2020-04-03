@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except: :index
   after_action :verify_policy_scoped, only: :index
 
+
+
   def show
+    @post = policy_scope(Post).find(params[:id])
     @user = authorize User.find(params[:id])
     record = Record.find_by(attribute: "value")
     if record.present?
