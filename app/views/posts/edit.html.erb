@@ -1,0 +1,16 @@
+
+<h1>Edit your Post!</h1>
+
+<div class="container">
+<%= simple_form_for (@post) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description%>
+  <%= f.input :category, collection: Post::CATEGORY%>
+  <%= f.input :group, collection: ["Community post", "Job post"] %>
+  <%= f.input :location %>
+  <%= f.hidden_field :date, :value => Time.now %>
+  <%= f.button :submit %>
+<% end %>
+</div>
+
+
