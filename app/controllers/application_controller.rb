@@ -67,6 +67,9 @@ class ApplicationController < ActionController::Base
     #     update?: 'You cannot edit this post!'
     #     create?: 'You cannot create posts!'
   end
+
+    # Multiple error messages per one policy action?
+    
 end
 
 

@@ -7,6 +7,14 @@ class PostPolicy < ApplicationPolicy
     @post = post
   end
 
+  def permitted_attributes_for_create
+    [:title, :body]
+  end
+
+  def permitted_attributes_for_edit
+    [:body]
+  end
+
   class Scope
     def initialize(user, scope)
       @user  = user
@@ -21,16 +29,6 @@ class PostPolicy < ApplicationPolicy
       end
     end
   end
-
-  def permitted_attributes_for_create
-    [:title, :body]
-  end
-
-  def permitted_attributes_for_edit
-    [:body]
-  end
-
-  # Multiple error messages per one policy action?
 
   private
 
