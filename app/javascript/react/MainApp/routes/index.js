@@ -5,6 +5,6 @@ export const routes = [
   {
     path: "/pages/index",
     exact: true,
-    component: LandingPage
-  }
+    component: LandingPage,
+  },
 ];
