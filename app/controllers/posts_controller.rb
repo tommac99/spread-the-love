@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
- def home
+ def index
   @posts = Post.all
-end
-
-def index
 end
 
 def new
@@ -30,24 +27,15 @@ def edit
   @post = Post.find(params[:id])
 end
 
-def update
+ def update
   @post = Post.find(params[:id])
-
-  if @post.update(post_param)
-    redirect_to post_path(@post.id)
+  if @post.update_attributes(permitted_attributes(@post))
+    redirect_to @post
   else
-   render :edit
+    render :edit
   end
 end
 
-def destroy
-  @post = Post.find(params[:id])
-  @post.destroy
-  redirect_to root_path
 end
 
-def post_param
-  params.require(:post).permit(:title, :description, :category,:location, :group,:date)
-end
-end
 
