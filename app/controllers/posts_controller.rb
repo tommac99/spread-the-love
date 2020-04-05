@@ -10,16 +10,17 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    # @post = Post.new
+    @post = current_user.posts.new
+    authorize @post
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def create
-    @post = Post.new(post_param)
-    @post.user_id = current_user.id
+    @post = current_user.posts.create(post_params)
+    # @post.user_id = current_user.id
 
     if @post.save!
       redirect_to root_path
@@ -29,16 +30,25 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
-    if @post.update_attributes(permitted_attributes(@post))
+    if @post.update(post_params)
       redirect_to @post
     else
       render :edit
     end
+  end
+
+  private
+
+  def set_post
+    @post = Post.find(params[:id])
+    authorize @post
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :description, :category, :location, :group,:date)
   end
 
 end

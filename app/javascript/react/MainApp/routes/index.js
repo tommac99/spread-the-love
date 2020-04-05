@@ -1,10 +1,10 @@
-import { LandingPage } from "../containers/landingPage";
+import { HomePage } from "../containers/HomePage";
 
 export const routes = [
   // --- First ---
   {
-    path: "/pages/index",
+    path: "/",
     exact: true,
-    component: LandingPage
-  }
+    component: HomePage,
+  },
 ];

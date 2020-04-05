@@ -28,7 +28,7 @@ class PostPolicy < ApplicationPolicy
   private
 
   def user_is_owner_of_record?
-    user == @user.record
+    @user == @record.user
   end
 end
 

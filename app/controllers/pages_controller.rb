@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  def index
-  end
+  # all other actions will have application layout
+  layout 'react'
 
   def home
-    
   end
+
 end

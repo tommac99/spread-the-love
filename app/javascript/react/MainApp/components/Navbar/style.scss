@@ -1,0 +1,8 @@
+@import "../../../../stylesheets/components/colors/index";
+
+.navbar-container {
+  width: 100vw;
+  height: 80px;
+  background: rgba($primary-clr, 0.2);
+  border-bottom: 2px solid $primary-clr;
+}
