@@ -1,44 +1,35 @@
 class PostPolicy < ApplicationPolicy
-
-  attr_reader :user, :post
-
-  def initialize(user, post)
-    @user = user
-    @post = post
-  end
-
-  def permitted_attributes_for_create
-    [:title, :body]
-  end
-
-  def permitted_attributes_for_edit
-    [:body]
-  end
-
-  class Scope
-    attr_reader :user, :scope
-
-    def initialize(user, scope)
-      @user  = user
-      @scope = scope
-    end
-
+  class Scope < Scope
     def resolve
-      if user.admin?
-        scope.all
-      else
-        scope.where(published: true)
-      end
+      scope.where(user_id: @user.try(:id))
     end
+  end
+
+  def new? 
+    user_is_owner_of_record?
+  end
+
+  def create? 
+    user_is_owner_of_record?
+  end
+
+  def show? 
+    user_is_owner_of_record?
+  end
+
+  def update? 
+    user_is_owner_of_record?
+  end
+
+  def destroy? 
+    user_is_owner_of_record?
   end
 
   private
 
-  def update?
-    user.admin? or not post.published?
-    # user.admin? or not record.published?
+  def user_is_owner_of_record?
+    user == @user.record
   end
-
 end
 
 
