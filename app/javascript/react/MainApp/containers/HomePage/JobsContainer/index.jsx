@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import "./style.scss";
+
 export const JobsContainer = () => {
   const [jobs, setJobs] = useState([]);
 
@@ -24,7 +26,7 @@ export const JobsContainer = () => {
   };
 
   return (
-    <div>
+    <div className="jobs-container">
       <h1>JobsContainer</h1>
       {renderJobs()}
     </div>

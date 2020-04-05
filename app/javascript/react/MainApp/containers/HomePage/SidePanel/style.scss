@@ -1,0 +1,8 @@
+@import "../../../../../stylesheets/components/colors/index";
+
+.panel-container {
+  width: 100%;
+  height: 100%;
+  background: rgba($primary-clr, 0.2);
+  border: 2px solid $primary-clr;
+}
