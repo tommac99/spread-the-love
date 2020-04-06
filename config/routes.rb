@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
   root 'pages#home'
+  get 'posts/home', to: 'posts#home'
 
+  
   get 'posts/index', to: 'posts#index'
   
   resources :posts
+  
+  ################################ OMNIAUTH DEVISE LOGINS ###############################
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   ################################ API ###############################
   namespace :api, defaults: { format: :json } do

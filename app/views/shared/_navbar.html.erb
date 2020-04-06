@@ -1,4 +1,5 @@
 <div>
+<h2><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></h2>
    <% if user_signed_in? %>
      <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
    <% else %>
