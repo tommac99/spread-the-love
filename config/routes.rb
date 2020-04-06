@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   root 'pages#home'
+  get 'posts/home', to: 'posts#home'
+
   
   get 'posts/index', to: 'posts#index'
   
@@ -8,10 +10,6 @@ Rails.application.routes.draw do
   
   ################################ OMNIAUTH DEVISE LOGINS ###############################
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
-
-  # devise_scope :user do
-  #   delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # end
 
   ################################ API ###############################
   namespace :api, defaults: { format: :json } do
