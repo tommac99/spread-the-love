@@ -5,16 +5,20 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email, :presence => true.
-                    :length: { :maximum => 100}
+  validates :email, :presence => true,
+                    :length: { :maximum => 100},
                     :uniqueness => true,
                     :format => EMAIL_REGEX,
                     :confirmation => true
 
-  validates :first_name,  :presence => true.
-                          :length: { :maximum => 25}
+  validates :first_name,  :presence => true,
+                          :length: { :maximum => 25 }
   
-  validates :last_name, :presence => true.
-                        :length: { :maximum => 50}
+  validates :last_name, :presence => true,
+                        :length: { :maximum => 50 }
+
+  validates :email, :presence => true,
+                    :length: { :within => 8..25 },
+                    :uniqueness => true
 
 end
