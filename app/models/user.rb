@@ -11,8 +11,10 @@ class User < ApplicationRecord
                     :format => EMAIL_REGEX,
                     :confirmation => true
 
-  validates :first_name, :presence => true.
-                    :length: { :maximum => 25}
+  validates :first_name,  :presence => true.
+                          :length: { :maximum => 25}
   
+  validates :last_name, :presence => true.
+                        :length: { :maximum => 50}
 
 end
