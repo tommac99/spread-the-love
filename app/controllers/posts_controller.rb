@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index,:show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   after_action :verify_authorized, except: :index
-  after_action :verify_policy_scoped, only: :index
 
   def index
-    @posts = policy_scope(Post).all
+    @posts = Post.all
+    authorize @posts
   end
 
   def new
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    authorize @post
   end
 
   def create
@@ -23,6 +24,7 @@ class PostsController < ApplicationController
     # @post.user_id = current_user.id
 
     if @post.save!
+      authorize @post
       redirect_to root_path
     else
       render :new
@@ -34,6 +36,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
+      authorize @post
       redirect_to @post
     else
       render :edit

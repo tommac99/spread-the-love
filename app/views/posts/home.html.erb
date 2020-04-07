@@ -1,0 +1,8 @@
+<div>
+  <h1>Welcome to Spread the love</h1>
+  <% @posts.each do |post| %>
+    <h3><%= post.title %> </h3>
+  <%end%>
+</div>
+
+<%= link_to "Create Post",new_posts_path %>

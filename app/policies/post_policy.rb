@@ -5,23 +5,27 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
-  def new? 
+  def index?
+    return true
+  end
+
+  def new?
     user_is_owner_of_record?
   end
 
-  def create? 
+  def create?
     user_is_owner_of_record?
   end
 
-  def show? 
+  def show?
+    return true
+  end
+
+  def update?
     user_is_owner_of_record?
   end
 
-  def update? 
-    user_is_owner_of_record?
-  end
-
-  def destroy? 
+  def destroy?
     user_is_owner_of_record?
   end
 
