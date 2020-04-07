@@ -1,0 +1,16 @@
+form {
+  max-width: 450px;
+  
+  // positioning context
+  > div {
+    position: relative;
+
+    // Looks like placeholder
+    > label {
+      opacity: 0.3;
+      position: absolute;
+      top: 22px;
+      left: 20px;
+    }
+  }
+}
