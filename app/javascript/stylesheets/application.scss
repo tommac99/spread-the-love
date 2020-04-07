@@ -1,4 +1,5 @@
-// @import url("../stylesheets/components/colors/_index.scss");
+@import "./components/index";
+@import "../react/MainApp/components/Navbar/style.scss";
 
 * {
   margin: 0;

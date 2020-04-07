@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
   root 'pages#home'
-
-  get 'posts/index', to: 'posts#index'
+  get 'pages/privacy_policy', to: 'pages#privacy_policy'
   
   resources :posts
+  
+  ################################ OMNIAUTH DEVISE LOGINS ###############################
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   ################################ API ###############################
   namespace :api, defaults: { format: :json } do
@@ -13,6 +15,5 @@ Rails.application.routes.draw do
       resources :posts, only: %i[index show create update destroy]
     end
   end
-
 
 end
