@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   
   root 'pages#home'
-  # get 'pages/home', to: 'pages#home'
-
+  get 'pages/privacy_policy', to: 'pages#privacy_policy'
   
   resources :posts
   
@@ -16,6 +15,5 @@ Rails.application.routes.draw do
       resources :posts, only: %i[index show create update destroy]
     end
   end
-
 
 end
