@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   validates :description, presence: true
   CATEGORY = %w[Help Volunteering Donations Paid Trade].freeze
   validates :category, inclusion: { in: CATEGORY }
-  validates :group, inclusion: { in: ["Community post", "Job post"] }
+  validates :group, inclusion: { in: ["Community Posting", "Job Posting"] }
 end
 
 

@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Title } from '../Title'
+import { CardContent } from '../CardContent'
+
+
+
 
 import "./style.scss";
 
@@ -19,16 +24,21 @@ export const JobsContainer = () => {
       .catch(console.error);
   };
 
-  const renderJobs = () => {
-    return jobs.map((job, index) => {
-      return <p key={index}>{job.title}</p>;
-    });
-  };
+
+  const oneDay = 1000 * 60 * 60 * 24;
+  let array = ["Volunteering", "Paid", "Trade"]
 
   return (
     <div className="jobs-container">
-      <h1>JobsContainer</h1>
-      {renderJobs()}
+      {jobs.map((job, index)=>{
+        return(
+         <div key={index} className="cards">
+          <Title title={job.title} job={job.category} category={array}/>
+          <CardContent id={index + 1} group={job.group} location={job.location}
+          date={Math.ceil((new Date - new Date(job.date))/oneDay)}/>
+         </div>
+        )
+      })}
     </div>
   );
 };

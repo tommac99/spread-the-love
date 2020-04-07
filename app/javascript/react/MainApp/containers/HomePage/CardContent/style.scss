@@ -1,0 +1,59 @@
+
+.list{
+  display: flex;
+  font-size: 14px;
+}
+
+.list p {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.MuiSvgIcon-fontSizeSmall {
+  position: relative;
+  padding-right: 0px;
+  margin-right: 6px;
+}
+
+.MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #23a5b4 !important;
+}
+.link{
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeLarge {
+    position: relative;
+    font-size: 22px;
+    top: 4px;
+}
+
+.post_button {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.post_date{
+  margin-top: -23px;
+}
+
+.location {
+  display: flex;
+  font-size: 13px;
+  color: grey;
+  font-weight: 500px;
+}
+.post_location {
+  margin-top: -23px;
+  padding-left: 20px;
+}

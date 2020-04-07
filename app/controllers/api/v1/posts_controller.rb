@@ -3,14 +3,14 @@
 module Api
   module V1
     class PostsController < ApplicationController
-      before_action :authenticate_user!, except: :index
+      before_action :authenticate_user!, except: [:index,:show]
       before_action :set_post, only: [:show, :edit, :update, :destroy]
 
       after_action :verify_authorized, except: :index
-      after_action :verify_policy_scoped, only: :index
+
 
       def index
-        @posts = policy_scope(Post).all
+        @posts = Post.all
         render json: @posts
       end
 
