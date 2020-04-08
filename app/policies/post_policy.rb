@@ -5,6 +5,10 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    return true
+  end
+
   def new? 
     user_is_owner_of_record?
   end

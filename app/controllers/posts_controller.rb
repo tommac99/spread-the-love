@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   after_action :verify_authorized, except: :index
@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    # @post = Post.new
     @post = current_user.posts.new
     authorize @post
   end
@@ -20,7 +19,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create(post_params)
-    # @post.user_id = current_user.id
 
     if @post.save!
       redirect_to root_path

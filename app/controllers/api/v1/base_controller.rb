@@ -6,8 +6,8 @@ module Api
       include Pundit
       include CurrentUserHelper
 
-      after_action :verify_authorized, except: :index # rubocop:disable Rails/LexicallyScopedActionFilter
-      after_action :verify_policy_scoped, only: :index # rubocop:disable Rails/LexicallyScopedActionFilter
+      after_action :verify_authorized, except: :index, unless: :skip_pundit? # rubocop:disable Rails/LexicallyScopedActionFilter
+      after_action :verify_policy_scoped, only: :index, unless: :skip_pundit? # rubocop:disable Rails/LexicallyScopedActionFilter
 
       rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
@@ -24,6 +24,10 @@ module Api
       # Please note that the bang below ensures we need an authenticated user
       def pundit_user
         current_user!
+      end
+
+      def skip_pundit?
+        devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
       end
     end
   end
