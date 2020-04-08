@@ -1,0 +1,21 @@
+.selected {
+  color:  white;
+  opacity: 0.9 !important;
+  box-shadow: 0 0 6px rgba(0,80,130, 0.2) !important;
+  background-color: rgba(0,80,130, 3);
+  font-weight: 300;
+}
+
+.title_component {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+.title{
+  font-size: 20px !important;
+  font-weight: 450;
+  color: #23a5b4;
+  font-size: 25px;
+}
+
