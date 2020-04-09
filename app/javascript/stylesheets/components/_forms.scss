@@ -1,3 +1,19 @@
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-weight: lighter;
+  letter-spacing: 9px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
 form {
   max-width: 450px;
   margin: 0 auto;
@@ -21,10 +37,12 @@ form {
     input[type="email"],
     input[type="password"] {
       width: 100%;
-      border: 0;
+      border: solid 1px #333;
       border-radius: 8px;
       padding: 20px 20px 20px 50px;
-      background: #eee;
+      background: #white;
+      font-weight: lighter;
+      box-shadow: #black 15px 15px 26px -2px inset;
 
       &:focus {
         // removing default focus style
@@ -70,10 +88,10 @@ form {
       max-height: 0;
       transition: 0.28s;
       overflow: hidden;
-      color: rgba(255, 0, 0, 0.5);
+      color: rgba(255, 0, 0, 0.8);
       font-style: normal;
       font-size: 80%;
-      font-weight: light;
+      font-weight: lighter;
     }
   }
 
@@ -87,11 +105,13 @@ form {
     padding: 20px;
     font-size: 1.2rem;
     border-radius: 8px;
+    box-shadow: inset 0px 4px 16px -1 rgba(#000, 0.14);
   }
 }
 
 body {
-  background: #333;
+  // background: #333;
+  background: white;
   font-family: "PT Sans", sans-serif;
   padding: 20px;
 }
