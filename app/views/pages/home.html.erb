@@ -1,1 +1,15 @@
+<div>
+  <%= render 'shared/navbar' %>
+  <% unless @user.nil? %>
+  <%= content_tag :div,
+  id: "appointments_data",
+  data: @user.to_json do %>
+<% end %>
+  <%end%>
+</div>
 <%= javascript_pack_tag 'react_app' %>
+<script type="text/javascript">
+   if(window.location.href.substr(-5) !== "?home") {
+      window.location = window.location.href + "?home";
+    }
+</script>

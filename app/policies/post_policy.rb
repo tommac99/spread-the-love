@@ -1,4 +1,4 @@
-class PostPolicy < ApplicationPolicy
+ class PostPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.where(user_id: @user.try(:id))
@@ -10,7 +10,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def new?
-    user_is_owner_of_record?
+    return true
   end
 
   def create?
@@ -29,13 +29,17 @@ class PostPolicy < ApplicationPolicy
     user_is_owner_of_record?
   end
 
+
+  def dashboard?
+    user.user_id.to_i == user.user.id
+  end
+
   private
 
   def user_is_owner_of_record?
-    @user == @record.user
+    user.present? && user.user.id == record.user_id
   end
 end
-
 
 
 

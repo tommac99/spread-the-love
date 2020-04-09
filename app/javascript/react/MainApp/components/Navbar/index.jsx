@@ -1,10 +1,4 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 import "./style.scss";
 
-export const Navbar = () => {
-  return (
-    <div className="navbar-container">
-      <h1>Navbar</h1>
-    </div>
-  );
-};
