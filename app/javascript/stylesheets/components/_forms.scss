@@ -11,7 +11,7 @@ h2 {
   font-weight: lighter;
   letter-spacing: 9px;
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 form {
@@ -23,7 +23,7 @@ form {
     position: relative;
     background: white;
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 
     // Looks like placeholder
     label {
@@ -100,7 +100,7 @@ form {
   input[type="submit"] {
     display: block;
     width: 100%;
-    margin: 20px 0;
+    margin: 16px 0;
     background: #2da5b3;
     color: white;
     border: 0;
