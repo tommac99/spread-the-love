@@ -1,51 +1,65 @@
-<h2>Sign up</h2>
-
-<form>
-  <div>
-    <input
-      type="text"
-      id="first_name"
-      name="first_name"
-      required
-      placeholder=" "
-    />
-    <label for="first_name">First Name</label>
+<div class="container">
+  <div class="why">
+    Why are we asking you to sign-up? <br />
+    We want you to feel safe and enjoy your search and offers. By signing in we
+    can make sure that offers are trustworthy and avoid an abuse of the platform
+    as well as scams and fraud. <br />
+    Another bonus of signing up is that we can offer faster connections and
+    therfore quicker help. <br />
+    Enjoy Your Community Job Board!
   </div>
 
-  <div>
-    <input
-      type="text"
-      id="last_name"
-      name="last_name"
-      required
-      placeholder=" "
-    />
-    <label for="last_name">Last Name</label>
-  </div>
+  <div class="sign-up">
+    <h2>Create Account</h2>
 
-  <div>
-    <input type="email" id="email" name="email" required placeholder=" " />
-    <label for="email">Email Address</label>
-    <div class="requirements">
-      Must be a valid email address.
-    </div>
-  </div>
+    <form>
+      <div>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          required
+          placeholder=" "
+        />
+        <label for="first_name">First Name</label>
+      </div>
 
-  <div>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      required
-      placeholder=" "
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-    />
-    <label for="password">Password</label>
-    <div class="requirements">
-      Your password must be at least 6 characters and also contain at least one
-      uppercase letter, one lowercase letter & a number.
-    </div>
-  </div>
+      <div>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          required
+          placeholder=" "
+        />
+        <label for="last_name">Last Name</label>
+      </div>
 
-  <input type="submit" value="Sign Up" />
-</form>
+      <div>
+        <input type="email" id="email" name="email" required placeholder=" " />
+        <label for="email">Email Address</label>
+        <div class="requirements">
+          Must be a valid email address.
+        </div>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder=" "
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+        />
+        <label for="password">Password</label>
+        <div class="requirements">
+          Your password must be at least 6 characters and also contain at least
+          one uppercase letter, one lowercase letter & a number.
+        </div>
+      </div>
+
+      <input type="submit" value="Sign Up" />
+    </form>
+  </div>
+</div>
