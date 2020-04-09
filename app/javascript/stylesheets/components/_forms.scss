@@ -1,0 +1,124 @@
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-weight: lighter;
+  letter-spacing: 9px;
+  margin-top: 100px;
+  margin-bottom: 32px;
+}
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+
+  // positioning context
+  div {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    // Looks like placeholder
+    label {
+      opacity: 0.3;
+      font-weight: lighter;
+      position: absolute;
+      font-size: 100%;
+      top: 20px;
+      left: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      border: solid 1px #333;
+      border-radius: 8px;
+      padding: 20px 20px 20px 50px;
+      background: #white;
+      font-size: 100%;
+      font-weight: lighter;
+      box-shadow: #black 15px 15px 26px -2px inset;
+
+      &:focus {
+        // removing default focus style
+        outline: 0;
+        // adding new one
+        background: white;
+
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:valid {
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        background: pink;
+        border-radius: 8px;
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:invalid:focus:not(:placeholder-shown) {
+        & ~ .requirements {
+          border-radius: 8px;
+          max-height: 200px;
+          padding: 0 30px 20px 50px;
+        }
+      }
+    }
+
+    .requirements {
+      padding: 0 30px 0 50px;
+      color: #999;
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: rgba(255, 0, 0, 0.8);
+      font-style: normal;
+      font-size: 80%;
+      font-weight: lighter;
+    }
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    background: #2da5b3;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: inset 0px 4px 16px -1 rgba(#000, 0.14);
+    // text-transform: uppercase;
+  }
+}
+
+body {
+  // background: #333;
+  background: white;
+  font-family: "PT Sans", sans-serif;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
