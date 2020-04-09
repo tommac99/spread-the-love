@@ -1,28 +1,30 @@
-<h2>Sign in</h2>
-<form>
-  <div>
-    <input type="email" id="email" name="email" required placeholder=" " />
-    <label for="email">Email Address</label>
-    <div class="requirements">
-      Please insert a valid email address.
+<div class="container">
+  <h2>Sign in</h2>
+  <form>
+    <div>
+      <input type="email" id="email" name="email" required placeholder=" " />
+      <label for="email">Email Address</label>
+      <div class="requirements">
+        Please insert a valid email address.
+      </div>
     </div>
-  </div>
 
-  <div>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      required
-      placeholder=" "
-      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-    />
-    <label for="password">Password</label>
-    <div class="requirements">
-      Your password must be at least 6 characters and also contain at least one
-      uppercase letter, one lowercase letter & a number.
+    <div>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder=" "
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+      />
+      <label for="password">Password</label>
+      <div class="requirements">
+        Your password must be at least 6 characters and also contain at least
+        one uppercase letter, one lowercase letter & a number.
+      </div>
     </div>
-  </div>
 
-  <input type="submit" value="Sign in" />
-</form>
+    <input type="submit" value="Sign in" />
+  </form>
+</div>
