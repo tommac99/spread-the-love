@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   layout 'react'
 
   def home
+    @user = current_user
   end
 
   def privacy_policy
