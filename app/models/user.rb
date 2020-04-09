@@ -5,22 +5,22 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  EMAIL_REGEX =  /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
+  # EMAIL_REGEX =  /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i,
 
-  validates :email, :presence => true,
-                    :length: { :maximum => 100},
-                    :uniqueness => true,
-                    :format => EMAIL_REGEX,
-                    :confirmation => true
+  # validates :email, :presence => true,
+  #                   :length: { maximum: 100},
+  #                   :uniqueness => true,
+  #                   :format => EMAIL_REGEX,
+  #                   :confirmation => true
 
-  validates :first_name,  :presence => true,
-                          :length: { :maximum => 25 }
+  # validates :first_name,  :presence => true,
+  #                         :length: { maximum: 25 }
   
-  validates :last_name, :presence => true,
-                        :length: { :maximum => 50 }
+  # validates :last_name, :presence => true,
+  #                       :length: { maximum: 50 }
 
-  validates :email, :presence => true,
-                    :length: { :within => 8..25 },
-                    :uniqueness => true
+  # validates :email, :presence => true,
+  #                   :length: { within: 8..25 },
+  #                   :uniqueness => true
 
 end
