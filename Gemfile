@@ -31,9 +31,18 @@ gem 'simple_form'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Custom gems
+# Allow authentication with users
 gem 'devise'
+# Help with forms
 gem 'simple_form'
+# Allow rules and policies for protection
 gem "pundit"
+
+# allow foreign logins with facebook
+gem 'omniauth-facebook'
+
+# .env for secret keys
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
