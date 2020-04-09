@@ -1,8 +1,11 @@
-@import "./components/index";
-@import "../react/MainApp/components/Navbar/style.scss";
+// Default Imports
+@import "./components/resets/index.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Components
+@import "./components/index";
+
+// React Imports
+@import "./react/index";
+
+// Rails Imports
+@import "./rails/index";

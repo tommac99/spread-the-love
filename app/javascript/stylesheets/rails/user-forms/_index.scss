@@ -41,10 +41,10 @@ form {
       border: solid 1px #333;
       border-radius: 8px;
       padding: 20px 20px 20px 50px;
-      background: #white;
+      background: white;
       font-size: 100%;
       font-weight: lighter;
-      box-shadow: #black 15px 15px 26px -2px inset;
+      box-shadow: black 15px 15px 26px -2px inset;
 
       &:focus {
         // removing default focus style
@@ -110,15 +110,4 @@ form {
     box-shadow: inset 0px 4px 16px -1 rgba(#000, 0.14);
     // text-transform: uppercase;
   }
-}
-
-body {
-  // background: #333;
-  background: white;
-  font-family: "PT Sans", sans-serif;
-  padding: 20px;
-}
-
-* {
-  box-sizing: border-box;
 }
