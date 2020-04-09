@@ -28,9 +28,10 @@ form {
     // Looks like placeholder
     label {
       opacity: 0.3;
-      font-weight: bold;
+      font-weight: lighter;
       position: absolute;
-      top: 18px;
+      font-size: 100%;
+      top: 20px;
       left: 20px;
     }
 
@@ -41,6 +42,7 @@ form {
       border-radius: 8px;
       padding: 20px 20px 20px 50px;
       background: #white;
+      font-size: 100%;
       font-weight: lighter;
       box-shadow: #black 15px 15px 26px -2px inset;
 
@@ -106,6 +108,7 @@ form {
     font-size: 1.2rem;
     border-radius: 8px;
     box-shadow: inset 0px 4px 16px -1 rgba(#000, 0.14);
+    // text-transform: uppercase;
   }
 }
 
