@@ -4,7 +4,7 @@ module Api
   module V1
     class PostsController < ApplicationController
       before_action :authenticate_user!, except: [:index,:show]
-      before_action :set_post, only: [:show, :edit, :update, :destroy]
+      before_action :set_post, only: [:edit, :update, :destroy]
 
       after_action :verify_authorized, except: :index
 
@@ -15,7 +15,9 @@ module Api
       end
 
       def show
-        render json: product
+        @posts = Post.where(category: params[:slug])
+        authorize @posts
+        render json: @posts
       end
 
       def create
@@ -47,7 +49,7 @@ module Api
       private
 
       def set_post
-        @post = Post.find(params[:id])
+        @post = Post.find(params[:slug])
         authorize @post
       end
 
