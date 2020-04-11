@@ -25,6 +25,8 @@
 
 .jobs-container {
   // background: #fc6464;
+  position: relative;
+  z-index: 99;
   max-width: 70%;
   padding: 0 40px;
 }
