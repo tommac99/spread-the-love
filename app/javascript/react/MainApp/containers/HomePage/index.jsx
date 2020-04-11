@@ -1,7 +1,7 @@
 import React from "react";
 import { JobsContainer } from "./JobsContainer";
 import { SidePanel } from "./SidePanel";
-// import { IconTabs } from './Tabs'
+import { IconTabs } from "./Tabs";
 
 import "./style.scss";
 
