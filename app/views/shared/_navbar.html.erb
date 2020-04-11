@@ -1,8 +1,25 @@
-<div>
-<h2><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></h2>
-   <% if user_signed_in? %>
-     <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-   <% else %>
-      <li><%= link_to "Sign up now!",  new_user_registration_path%></li>
-   <% end %>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar_text">
+  <a href="/" class="navbar_link"><h1 class="navbar_title">SPREAD THE LOVE</h1></a>
+  <p class="navbar_paragraph">Your community Job Board</p>
+  </div>
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+      <li class="nav-item active">
+        <li id="logout"><%= link_to "Logout", destroy_user_session_path, class: "nav-item-links", :method => :delete %></li>
+      </li>
+      <% else %>
+      <li class="nav-item">
+       <li id="sign_up"><%= link_to "Sign-up", new_user_registration_path, class: "nav-item-links"%></li>
+       <li id="login"><%= link_to "Login", user_session_path, class: "nav-item-links" %></li>
+      </li>
+      <%end%>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://source.unsplash.com/O3ymvT7Wf9U/200x200/", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      </li>
+    </ul>
 </div>
+
+
+

@@ -16,3 +16,24 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.small_container{
+  display: flex;
+}
+
+.post_information {
+  display: flex;
+}
+
+.buttons{
+  background-color: white;
+  width: 850px;
+}
+
+.makeStyles-root-33 {
+  flex-grow: 1;
+  max-width: 850px !important;
+}
+
+.MuiTab-textColorPrimary.Mui-selected {
+    color: #23a5b4 !important;
+}

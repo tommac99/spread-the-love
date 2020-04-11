@@ -2,19 +2,19 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   background-color: #ecfbfc;
 }
 
 .jobs-container {
   width: 60%;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-top: 50px;
 }
 
 .side-container {
-  padding: 1px;
-  width: 23%;
-  height: 1000px;
+  width: 40%;
+  padding: 20px;
+  height: 450px;
 }
-
-

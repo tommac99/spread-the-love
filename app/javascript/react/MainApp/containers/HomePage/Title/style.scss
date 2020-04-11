@@ -7,15 +7,40 @@
 }
 
 .title_component {
-  display: flex;
   justify-content: space-between;
   font-weight: 300;
+  padding-left: 50px;
 }
 
-.title{
+.title {
   font-size: 20px !important;
-  font-weight: 450;
+  font-weight: normal;
   color: #23a5b4;
   font-size: 25px;
+  padding-left: 10px;
+}
+
+
+.list{
+  display: flex;
+  font-size: 14px;
+  margin-top: 59px;
+}
+
+.list p {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+.group {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 200;
 }
 

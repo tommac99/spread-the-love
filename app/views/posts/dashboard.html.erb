@@ -1,0 +1,20 @@
+<h1>Welcome <%=@user.name%></h1>
+<h2>Post Count: <%=@posts.count%></h2>
+
+<% @posts.each do |post| %>
+<div>
+  <ul>
+    <li><%=post.title%></li>
+  </ul>
+</div>
+  <%= link_to "Edit Post" , edit_post_path(post.id) %>
+</div>
+<div>
+   <%= link_to "Delete Post",
+                  post_path(post.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+</div>
+<%end%>
+
+<a href="/">Go back </a>
