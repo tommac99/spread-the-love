@@ -1,7 +1,7 @@
 import React from "react";
 import { JobsContainer } from "./JobsContainer";
 import { SidePanel } from "./SidePanel";
-import { IconTabs } from './Tabs'
+// import { IconTabs } from './Tabs'
 
 import "./style.scss";
 
@@ -11,10 +11,8 @@ export const HomePage = () => {
       <div className="side-container">
         <SidePanel />
       </div>
-      <div>
       <div className="jobs-container">
         <JobsContainer />
-      </div>
       </div>
     </div>
   );

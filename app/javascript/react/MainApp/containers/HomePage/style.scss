@@ -1,20 +1,39 @@
 .home-container {
-  width: 100%;
+  position: relative;
+  z-index: -3;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
-  align-items: baseline;
-  background-color: #ecfbfc;
+  justify-content: center;
+  background: url("../../../../../assets/images/60286.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 30px 10%;
+
+  &::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.8);
+    // background: linear-gradient(20deg, #233d4d, #1c6590, #1c6590, #1c6590);
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+  }
 }
 
 .jobs-container {
-  width: 60%;
-  margin-bottom: 30px;
+  // background: #fc6464;
+  max-width: 70%;
+  padding: 0 40px;
 }
 
 .side-container {
-  padding: 1px;
-  width: 23%;
-  height: 1000px;
+  // background: teal;
+  width: 30%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
 }
-
-
