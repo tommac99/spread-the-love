@@ -1,4 +1,4 @@
-.container {
+.register-form-container {
   max-width: 950px;
   margin: 0 auto;
   justify-content: center;
@@ -110,4 +110,16 @@ form {
     box-shadow: inset 0px 4px 16px -1 rgba(#000, 0.14);
     // text-transform: uppercase;
   }
+}
+
+.facebook-sign-in-button {
+  background-color: #46629e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

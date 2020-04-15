@@ -1,7 +1,4 @@
-<h2>Log in</h2>
-<h2><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></h2>
-
-<div class="user-form-container">
+<div class="register-form-container">
   <h2>Sign in</h2>
   <form>
     <div>
@@ -31,3 +28,7 @@
     <input type="submit" value="Sign in" />
   </form>
 </div>
+
+<h2 class="facebook-sign-in-button">
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+</h2>

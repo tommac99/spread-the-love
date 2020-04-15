@@ -1,28 +1,70 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :name,
-                required: true,
-                input_html: { autocomplete: "name" } %>
+<div class="register-form-container">
+  <div class="why">
+    Why are we asking you to sign-up? <br />
+    We want you to feel safe and enjoy your search and offers. By signing in we
+    can make sure that offers are trustworthy and avoid an abuse of the platform
+    as well as scams and fraud. <br />
+    Another bonus of signing up is that we can offer faster connections and
+    therfore quicker help. <br />
+    Enjoy Your Community Job Board!
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <div class="sign-up">
+    <h2>Create Account</h2>
 
-<%= render "devise/shared/links" %>
+    <form>
+      <div>
+        <input
+          type="text"
+          id="first_name"
+          name="first_name"
+          required
+          placeholder=" "
+        />
+        <label for="first_name">First Name</label>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          id="last_name"
+          name="last_name"
+          required
+          placeholder=" "
+        />
+        <label for="last_name">Last Name</label>
+      </div>
+
+      <div>
+        <input type="email" id="email" name="email" required placeholder=" " />
+        <label for="email">Email Address</label>
+        <div class="requirements">
+          Must be a valid email address.
+        </div>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder=" "
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+        />
+        <label for="password">Password</label>
+        <div class="requirements">
+          Your password must be at least 6 characters and also contain at least
+          one uppercase letter, one lowercase letter & a number.
+        </div>
+      </div>
+
+      <input type="submit" value="Sign Up" />
+    </form>
+  </div>
+</div>
+
+<h2 class="facebook-sign-in-button">
+  <%= link_to " F | Sign up with Facebook",
+  user_facebook_omniauth_authorize_path %>
+</h2>
